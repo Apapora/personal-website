@@ -1,13 +1,14 @@
 import React from "react";
 import Badge from "../elements/Badge";
 import Resume from "../../resume.json";
-import App from "../elements/NewParticle"
+import App from "../elements/Particle"
 
 function AboutMe() {
   return (
-    <section className="section has-background-info pos-rel" id="aboutMe">
-      <App />
+    <section className="section has-background-info" id="aboutMe">
       <div className="container has-text-centered">
+      <App />
+
         <figure className="image container is-180x180">
           <img
             width="180px"

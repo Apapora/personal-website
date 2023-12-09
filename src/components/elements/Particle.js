@@ -1,20 +1,22 @@
 import React from "react";
-import Particles from "react-tsparticles";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import { useCallback } from "react";
 
-function Particle() {
-  return (
-    <Particles className="particle-container"
-      id="tsparticles"
-      params={{
+const App = () => {
+    const options = {
         particles: {
+          color: {
+            value: "#ffffff",
+          },
           number: {
             value: 160,
             density: {
               enable: true,
-              value_area: 1500,
+              area: 1500,
             },
           },
-          line_linked: {
+          links: {
             enable: false,
             opacity: 0.03,
           },
@@ -23,18 +25,18 @@ function Particle() {
             speed: 0.05,
           },
           size: {
-            value: 1,
+            value: { min: 1, max: 3 },
           },
           opacity: {
-            anim: {
+            animation: {
               enable: true,
               speed: 1,
-              opacity_min: 0.05,
+              minimumValue: 0.05,
             },
           },
         },
         fullScreen: {
-          zIndex: 99,
+          zIndex: 10,
           enable: false // this is the line to change
         },
         interactivity: {
@@ -50,10 +52,18 @@ function Particle() {
             },
           },
         },
-        retina_detect: true,
-      }}
-    />
-  );
-}
+        detectRetina: true,
+    }
 
-export default Particle;
+    const particlesInit = useCallback(async (engine) => {
+        await loadFull(engine);
+    }, []);
+
+    return (
+        <div className="App">
+            <Particles is="tsparticles" options={options} init={particlesInit} />
+        </div>
+    );
+};
+
+export default App

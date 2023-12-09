@@ -5,7 +5,7 @@
     "picture": "images/cjohn.webp",
     "x_pictureFallback": "images/cjohn.jpg",
     "x_title": "Howdy!",
-    "summary": "Welcome to my website.",
+    "summary": "Welcome to my site.",
     "location": {
       "country": "Taiwan",
       "countryCode": "TW",
@@ -39,34 +39,52 @@
       "website": "https://chad-johnton.com",
       "startDate": "2023-03-15",
       "endDate": "",
-      "summary": "Started working for myself, providing expertise on infrasture best practices and productivity tools for international startups.",
+      "summary": "Started working for myself, providing expertise on infrasture best practices and productivity tools for startups.",
       "highlights": []
     },
     {
       "company": "University of Illinios",
       "position": "Manager of System Services",
       "website": "https://illinois.edu",
-      "startDate": "2019-10-15",
+      "startDate": "2016-08-15",
       "endDate": "2021-10-15",
-      "summary": "Joined the Athena project, a Bosch & Daimler effort to bring a level 4 autonomous car to the streets.",
+      "summary": "Adminstrator and/or architect for several critical services: file servers, data backups, system monitoring, and our ticketing system",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinios",
+      "position": "Technology Analyst / Teaching Technology Specialist",
+      "website": "https://illinois.edu",
+      "startDate": "2012-01-10",
+      "endDate": "2014-08-15",
+      "summary": "Promoted to additionally support VMware infrastructure, configure hypervisors, physical work in data centers.",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinios",
+      "position": "Teaching Technology Specialist",
+      "website": "https://illinois.edu",
+      "startDate": "2012-01-10",
+      "endDate": "2014-08-15",
+      "summary": "First full time position. Managed 100s of endpoints, instructional learning spaces, and IT support team.",
       "highlights": []
     },
     {
       "company": "University of Illinois",
       "position": "Computer Support Specialist",
       "website": "https://www.illinois.edu/",
-      "startDate": "2012-01-15",
-      "endDate": "",
-      "summary": "Moved into a full time position sion helping them build one of the biggest european projects, Galileo Satellite System",
+      "startDate": "2011-08-15",
+      "endDate": "2011-12-10",
+      "summary": "Promoted to a more technical role to assist full time IT staff. Learned how to write PowerShell scripts, repair/replace PC parts and image machines",
       "highlights": []
     },
     {
       "company": "University of Illinois",
       "position": "IT Help Desk Support",
       "website": "https://www.illinois.edu",
-      "startDate": "2010-09-20",
-      "endDate": "2012-01-15",
-      "summary": "My first IT work experience. Interning as an IT Support Technician I was able to learn and explore way more than the workings of a big IT Infrastructure. I got to work with PowerShell scripting, PHP and email marketing.",
+      "startDate": "2010-08-20",
+      "endDate": "2011-05-10",
+      "summary": "Worked part time as a student, quickly grew customer support skills and familiarity with ticketing systems",
       "highlights": []
     }
   ],

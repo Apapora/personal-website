@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import Resume from "../../resume.json";
 //import Particle from "./Particle";
-import App from "./NewParticle"
+import App from "./Particle"
 
 function Hero() {
   return (
@@ -11,7 +11,7 @@ function Hero() {
         <NavBar />
       </div>
       <div className="hero-body">
-      <App />
+      
         <div className="container">
           <p className="subtitle is-5 has-text-weight-light">Hello, I'm an</p>
           <h1 className="title">{Resume.basics.label}</h1>
