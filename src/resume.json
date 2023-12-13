@@ -1,0 +1,222 @@
+{
+  "basics": {
+    "name": "Chad Johnston",
+    "label": "IT Consultant",
+    "picture": "images/cjohn.webp",
+    "x_pictureFallback": "images/cjohn.jpg",
+    "x_title": "Howdy!",
+    "summary": "Welcome to my site.",
+    "location": {
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "region": "Taipei"
+    },
+    "profiles": [
+      {
+        "network": "Instagram",
+        "username": "chadenstein",
+        "url": "https://www.instagram.com/chadenstein/",
+        "x_icon": "fab fa-2x fa-instagram"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Chad Johnston",
+        "url": "https://www.linkedin.com/in/chad-johnston-8427b040/",
+        "x_icon": "fab fa-2x fa-linkedin"
+      },
+      {
+        "network": "GitHub",
+        "username": "",
+        "url": "https://github.com/apapora",
+        "x_icon": "fab fa-2x fa-github"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Self-employed",
+      "position": "Infrastructure consultant",
+      "website": "https://chad-johnton.com",
+      "startDate": "2023-03-15",
+      "endDate": "",
+      "summary": "Started working for myself, providing expertise on infrasture best practices and productivity tools for startups.",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinios",
+      "position": "Manager of System Services",
+      "website": "https://illinois.edu",
+      "startDate": "2016-08-15",
+      "endDate": "2021-10-15",
+      "summary": "Adminstrator and/or architect for several critical services: file servers, data backups, system monitoring, and our ticketing system",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinios",
+      "position": "Technology Analyst / Teaching Technology Specialist",
+      "website": "https://illinois.edu",
+      "startDate": "2012-01-10",
+      "endDate": "2014-08-15",
+      "summary": "Promoted to additionally support VMware infrastructure, configure hypervisors, physical work in data centers.",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinios",
+      "position": "Teaching Technology Specialist",
+      "website": "https://illinois.edu",
+      "startDate": "2012-01-10",
+      "endDate": "2014-08-15",
+      "summary": "First full time position. Managed 100s of endpoints, instructional learning spaces, and IT support team.",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinois",
+      "position": "Computer Support Specialist",
+      "website": "https://www.illinois.edu/",
+      "startDate": "2011-08-15",
+      "endDate": "2011-12-10",
+      "summary": "Promoted to a more technical role to assist full time IT staff. Learned how to write PowerShell scripts, repair/replace PC parts and image machines",
+      "highlights": []
+    },
+    {
+      "company": "University of Illinois",
+      "position": "IT Help Desk Support",
+      "website": "https://www.illinois.edu",
+      "startDate": "2010-08-20",
+      "endDate": "2011-05-10",
+      "summary": "Worked part time as a student, quickly grew customer support skills and familiarity with ticketing systems",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Illinois",
+      "area": "Digital Communication and Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2007-09-15",
+      "endDate": "2011-12-07",
+      "courses": [
+        "Data Structures",
+        "Database Systems",
+        "Communication Networks",
+        "Computer Architecture"
+      ]
+    }
+  ],
+  "wishlist": [
+    {
+      "name":"Knife honer",
+      "x_icon": "fa-gift",
+      "x_description": "https://tinyurl.com/2feh6f3b"
+    },
+    {
+      "name":"中文書",
+      "x_icon": "fa-gift",
+      "x_description": "https://tinyurl.com/yc3tdkzv"
+    }
+  ],
+  "skills": [
+    {
+      "name": "AWS",
+      "x_icon": "fa-brands fa-aws",
+      "x_description": "EC2, VPC, IoT Core, Cognito, DynamoDB, S3, CloudFront, IAM and others"
+    },
+    {
+      "name": "Infrastructure as Code",
+      "x_icon": "fa-code",
+      "x_description": "Developing and maintaing infrastructure as code with Terraform"
+    },
+    {
+      "name": "Configuration Management",
+      "x_icon": "fa-gears",
+      "x_description": "Launching, configuring and maintaining cloud and on prem environments with Ansible"
+    },
+    {
+      "name": "CI/CD",
+      "x_icon": "fa-infinity",
+      "x_description": "Implementing continuous integration and deployment pipelines with Jenkins and GitLab CI"
+    },
+    {
+      "name": "Python",
+      "x_icon": "fa-brands fa-python",
+      "x_description": "Writting IoT apps and automation scripts with Python"
+    },
+    {
+      "name": "Monitoring",
+      "x_icon": "fa-chart-line",
+      "x_description": "Implementing centralized monitoring solution for cloud environments with Telegraf, InfluxDB and Grafana"
+    },
+    {
+      "name": "Serverless",
+      "x_icon": "fa-bolt",
+      "x_description": "Building reliable and cost efficient systems with Lambda functions and the serverless framework"
+    },
+    {
+      "name": "Containers",
+      "x_icon": "fa-brands fa-docker",
+      "x_description": "Delivering and distributing applications and tools with Docker and docker-compose"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Mandarin Chinese",
+      "fluency": "Basic speaker"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AWS Solutions Architect Associate",
+      "issuer": "Amazon Web Services Training and Certification",
+      "url": "",
+      "x_badgeId": "",
+      "x_imageId": "0e284c3f-5164-4b21-8660-0d84737941bc",
+      "x_imageName": "image.png"
+    },
+    {
+      "name": "HashiCorp: Terraform Associate",
+      "issuer": "HashiCorp",
+      "url": "",
+      "x_badgeId": "",
+      "x_imageId": "99289602-861e-4929-8277-773e63a2fa6f",
+      "x_imageName": "image.png"
+    },
+    {
+      "name": "Microsoft: DevOps Engineer Expert",
+      "issuer": "Microsft",
+      "url": "",
+      "x_badgeId": "",
+      "x_imageId": "e6129b84-b3ef-4863-b934-bcbe139bc28d",
+      "x_imageName": "image.png"
+    },
+    {
+      "name": "Certificate of Cloud Security Knowledge",
+      "issuer": "Cloud Security Alliance",
+      "url": "",
+      "x_badgeId": "",
+      "x_imageId": "25ba8143-ac0a-413c-8c66-01c9edc4a80f",
+      "x_imageName": "CCSK-v4-Credly-badge.png"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Travel bug",
+      "x_icon": "fa-globe"
+    },
+    {
+      "name": "Outdoors",
+      "x_icon": "fa-leaf"
+    },
+    {
+      "name": "Foodie",
+      "x_icon": "fa-utensils"
+    },
+    {
+      "name": "Gamer",
+      "x_icon": "fa-gamepad"
+    }
+  ]
+}

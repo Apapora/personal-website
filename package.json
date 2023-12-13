@@ -1,0 +1,40 @@
+{
+  "name": "personal-website",
+  "version": "1.3.4",
+  "private": true,
+  "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "tsparticles": "^2.12.0"
+  },
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": "^10.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "description": "This is a repo for my personal website files hosted on s3. It uses [Bulma CSS](https://bulma.io/) and [React](https://react.dev/) along with [JSON resumes.](https://jsonresume.org/)",
+  "main": "index.js",
+  "author": "apapora",
+  "license": "MIT"
+}
