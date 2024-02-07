@@ -177,19 +177,19 @@
       "x_imageName": "image.png"
     },
     {
-      "name": "HashiCorp: Terraform Associate",
-      "issuer": "HashiCorp",
-      "url": "",
-      "x_badgeId": "",
-      "x_imageId": "99289602-861e-4929-8277-773e63a2fa6f",
-      "x_imageName": "image.png"
-    },
-    {
       "name": "Microsoft: DevOps Engineer Expert",
       "issuer": "Microsft",
       "url": "",
       "x_badgeId": "",
       "x_imageId": "e6129b84-b3ef-4863-b934-bcbe139bc28d",
+      "x_imageName": "image.png"
+    },
+    {
+      "name": "ITIL Foundation",
+      "issuer": "Vinsys",
+      "url": "",
+      "x_badgeId": "",
+      "x_imageId": "55ee746f-e729-4574-b4e7-6d5d71e725c3",
       "x_imageName": "image.png"
     },
     {

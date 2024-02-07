@@ -3,7 +3,6 @@ import AboutMe from "../sections/AboutMe";
 import Skills from "../sections/Skills";
 import Certifications from "../sections/Certifications";
 import Experience from "../sections/Experience";
-import Wishlist from "../sections/Wishlist";
 
 function Content() {
   return (
@@ -12,7 +11,6 @@ function Content() {
       <Skills />
       <Certifications />
       <Experience />
-      <Wishlist />
     </main>
   );
 }
