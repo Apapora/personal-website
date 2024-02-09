@@ -46,15 +46,15 @@ jobs:
           cd ../
       - uses: sai-sharan/aws-s3-sync-action@master
         with:
-            access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            region: 'us-east-1'
-            source: 'build'
-            destination_bucket: ${{ secrets.AWS_BUCKET_NAME }}
-            exclude: '.git/*'
-            delete: true
-            quiet: false
-        
+          access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: "us-east-1"
+          source: "build"
+          destination_bucket: ${{ secrets.AWS_BUCKET_NAME }}
+          exclude: ".github/*"
+          delete: true
+          quiet: false
+
   invalidate:
     runs-on: ubuntu-latest
     needs: deploy
