@@ -44,17 +44,6 @@ jobs:
       - run: |
           ls
           cd ../
-      - name: Configure AWS credentials
-        run: |
-          echo "[default]" > ~/.aws/credentials
-          echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >> ~/.aws/credentials
-          echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> ~/.aws/credentials
-
-      - name: Display AWS user ID
-        run: aws sts get-caller-identity
-
-      - name: List S3 buckets
-        run: aws s3 ls
 
       - uses: sai-sharan/aws-s3-sync-action@master
         with:
