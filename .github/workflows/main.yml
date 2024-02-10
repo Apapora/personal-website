@@ -38,9 +38,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create build directory
-        run: |
-          mkdir build
-          cd build
+        run: mkdir build
+
+      - name: CD into build
+        run: cd build
+
+      - name: Display current working directory
+        run: pwd  
 
       - name: Download a single artifact
         uses: actions/download-artifact@v3
