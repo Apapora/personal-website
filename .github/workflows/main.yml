@@ -41,7 +41,7 @@ jobs:
         run: mkdir build
 
       - name: CD into build
-        run: cd build
+        run: cd /home/runner/work/personal-website/personal-website/build
 
       - name: Display current working directory
         run: pwd  
