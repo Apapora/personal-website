@@ -45,13 +45,14 @@ jobs:
         with:
           name: my-build
 
-      - name: List files in build directory
-        run: |
-          ls
-          ls build
-
       - name: Display current working directory
         run: pwd
+        
+      - name: List files in current directory
+        run: ls 
+        
+      - name: List files in build directory
+        run: ls build
 
       - name: Sync with S3
         uses: jakejarvis/s3-sync-action@master
