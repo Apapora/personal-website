@@ -46,7 +46,9 @@ jobs:
           name: my-build
 
       - name: List files in build directory
-        run: ls build
+        run: |
+          ls
+          ls build
 
       - name: Display current working directory
         run: pwd
