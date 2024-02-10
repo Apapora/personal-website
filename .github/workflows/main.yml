@@ -22,6 +22,7 @@ jobs:
           npm install
           npm run build --if-present
           ls
+          ls ./build
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -45,7 +46,7 @@ jobs:
           name: my-build
 
       - name: List files in build directory
-        run: ls
+        run: ls build
 
       - name: Display current working directory
         run: pwd
