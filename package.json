@@ -3,6 +3,9 @@
   "version": "1.3.3",
   "private": true,
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "d3": "^7.8.5",
+    "d3-delaunay": "^6.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-particles": "^2.12.2",
@@ -33,5 +36,10 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1"
-  }
+  },
+  "description": "This is a repo for my personal website files hosted on s3. It uses [Bulma CSS](https://bulma.io/) and [React](https://react.dev/) along with [JSON resumes.](https://jsonresume.org/)",
+  "main": "index.js",
+  "author": "apapora",
+  "license": "MIT"
 }
+
