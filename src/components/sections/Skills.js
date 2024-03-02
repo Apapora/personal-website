@@ -22,6 +22,7 @@ function buildSkillsRow(skills, start, end) {
 
 function Skills() {
   return (
+    <div>
     <section className="section" id="skills">
       <div className="container">
         <h1 className="title">Skills</h1>
@@ -33,6 +34,7 @@ function Skills() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 
