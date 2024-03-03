@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Badge from "../elements/Badge";
 import Resume from "../../resume.json";
-import App from "../elements/Particle"
+import App from "../elements/Particle";
+import axios from "axios";
 
 function AboutMe() {
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+    setErrorMessage(""); // Clear any previous error messages when typing
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (message.length < 5 || message.length > 50) {
+      setErrorMessage("Text must be between 5 and 50 characters long.");
+      return;
+    }
+
+    try {
+      const response = await axios.post('YOUR_API_ENDPOINT_URL', { message });
+      console.log(response.data);
+      // Handle success response
+    } catch (error) {
+      console.error(error);
+      // Handle error
+    }
+  };
+
+
   return (
     <section className="section has-background-info" id="aboutMe">
       <div className="container has-text-centered">
@@ -24,6 +51,9 @@ function AboutMe() {
         </p>
         <div className="subtitle is-5 has-text-white has-text-weight-light summary-text" dangerouslySetInnerHTML={{__html: Resume.basics.summary}}>
         </div>
+        
+        
+
         <div className="container interests">
           <div className="field is-grouped is-grouped-multiline has-text-centered">
             {Resume.interests.map((value, index) => {
