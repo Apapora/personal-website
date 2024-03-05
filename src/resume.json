@@ -29,6 +29,12 @@
         "username": "",
         "url": "https://github.com/apapora",
         "x_icon": "fab fa-2x fa-github"
+      },
+      {
+        "network": "GoodReads",
+        "username": "",
+        "url": "https://www.goodreads.com/user/show/130857021-chad-jo",
+        "x_icon": "fab fa-2x fa-goodreads"
       }
     ]
   },
