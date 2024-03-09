@@ -5,7 +5,7 @@
     "picture": "images/cjohn.webp",
     "x_pictureFallback": "images/cjohn.jpg",
     "x_title": "Howdy!",
-    "summary": "Welcome to my site.",
+    "summary": "I'd love to chat with you about your ideas",
     "location": {
       "country": "Taiwan",
       "countryCode": "TW",
@@ -195,8 +195,8 @@
       "issuer": "Microsft",
       "url": "",
       "x_badgeId": "",
-      "x_imageId": "e6129b84-b3ef-4863-b934-bcbe139bc28d",
-      "x_imageName": "image.png"
+      "x_imageId": "c3ab66f8-5d59-4afa-a6c2-0ba30a1989ca",
+      "x_imageName": "CERT-Expert-DevOps-Engineer-600x600.png"
     },
     {
       "name": "Certificate of Cloud Security Knowledge",

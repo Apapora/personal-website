@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Badge from "../elements/Badge";
 import Resume from "../../resume.json";
-import App from "../elements/Particle";
+//import App from "../elements/TSParticles";
 import axios from "axios";
 
 function AboutMe() {
@@ -22,12 +22,25 @@ function AboutMe() {
     }
 
     try {
-      const response = await axios.post('https://xbfhv22kvj.execute-api.us-east-1.amazonaws.com/dev/message', { message });
+      const tak = "hFxcdJeMKi1K5a8FGXY5t2r2U1o6yTD01sUdEH2w"
+      const response = await axios.post('https://xbfhv22kvj.execute-api.us-east-1.amazonaws.com/dev/message', { message }, 
+      { headers: {
+        'x-api-key':`${tak}`,
+        }
+      });
       console.log(response.data);
       setMessageReceived(true); // Update state to indicate message received
     } catch (error) {
       console.error(error);
       // Handle error
+      if (error.response && error.response.status === 429) {
+        // Handle 429 error (Too Many Requests)
+        // Display custom message to the user
+        setErrorMessage("My answering machine is currently full. Please try again tomorrow");
+      } else {
+        // Handle other errors
+        setErrorMessage("An error occurred while processing your request.");
+      }
     }
   };
 
@@ -35,7 +48,7 @@ function AboutMe() {
   return (
     <section className="section has-background-info" id="aboutMe">
       <div className="container has-text-centered">
-      <App />
+      
 
         <figure className="image container is-180x180">
           <img
@@ -51,6 +64,11 @@ function AboutMe() {
           {Resume.basics.x_title}
         </p>
         <div className="subtitle is-5 has-text-white has-text-weight-light summary-text" dangerouslySetInnerHTML={{__html: Resume.basics.summary}}>
+        </div>
+        <div className="subtitle is-5 has-text-white has-text-weight-light summary-text">
+          <p>
+            Welcome to my site. You can reach me with 
+          </p>
         </div>
         {messageReceived ? ( // Conditional rendering based on messageReceived state
           <p className="subtitle is-4 has-text-white has-text-weight-bold">
@@ -95,4 +113,3 @@ function AboutMe() {
 }
 
 export default AboutMe;
-w

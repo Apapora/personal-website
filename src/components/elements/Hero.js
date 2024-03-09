@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Resume from "../../resume.json";
-import App from "../elements/Particle";
+import App from "./Particle";
 
 function Hero() {
   return (
