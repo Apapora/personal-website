@@ -80,4 +80,6 @@ html {
 }  
 */
 
-  
+.hero-foot {
+    z-index: 10;
+}

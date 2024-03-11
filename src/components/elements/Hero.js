@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Resume from "../../resume.json";
+import App from "./Particle";
 
 function Hero() {
   return (
@@ -8,6 +9,7 @@ function Hero() {
       <div className="hero-head">
         <NavBar />
       </div>
+      <div><App /></div>
       <div className="hero-body">
         <div className="container">
           <p className="subtitle is-5 has-text-weight-light">Hello, I'm an</p>
@@ -22,7 +24,7 @@ function Hero() {
           <div className="column"></div>
           {Resume.basics.profiles.map((value, index) => {
             return (
-              <div key={index} className="column has-text-centered">
+              <div key={index} className="column has-text-centered pb-4">
                 <a
                   href={value.url}
                   target="blank"
