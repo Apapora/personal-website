@@ -5,7 +5,7 @@
     "picture": "images/cjohn.webp",
     "x_pictureFallback": "images/cjohn.jpg",
     "x_title": "Howdy!",
-    "summary": "I'd love to chat with you about your ideas",
+    "summary": "Whether you have questions, want to share your thoughts, or just want to chat, I'd love to hear from you. Let's connect!",
     "location": {
       "country": "Taiwan",
       "countryCode": "TW",
@@ -17,12 +17,18 @@
         "username": "chadenstein",
         "url": "https://www.instagram.com/chadenstein/",
         "x_icon": "fab fa-2x fa-instagram"
-      },
+      }, 
       {
         "network": "LinkedIn",
         "username": "Chad Johnston",
         "url": "https://www.linkedin.com/in/chad-johnston-8427b040/",
         "x_icon": "fab fa-2x fa-linkedin"
+      },
+      {
+        "network": "Email",
+        "username": "chadmanj@proton.me",
+        "url": "mailto:chadmanj@proton.me",
+        "x_icon": "fa fa-2x fa-envelope"
       },
       {
         "network": "GitHub",
@@ -33,7 +39,7 @@
       {
         "network": "GoodReads",
         "username": "",
-        "url": "https://www.goodreads.com/user/show/130857021-chad-jo",
+        "url": "https://www.goodreads.com /user/show/130857021-chad-jo",
         "x_icon": "fab fa-2x fa-goodreads"
       }
     ]
@@ -209,8 +215,12 @@
   ],
   "interests": [
     {
-      "name": "Travel bug",
+      "name": "Traveling",
       "x_icon": "fa-globe"
+    },
+    {
+      "name": "Working out",
+      "x_icon": "fa-heartbeat"
     },
     {
       "name": "Outdoors",
@@ -221,8 +231,12 @@
       "x_icon": "fa-utensils"
     },
     {
-      "name": "Gamer",
+      "name": "Gaming",
       "x_icon": "fa-gamepad"
+    },
+    {
+      "name": "Reading",
+      "x_icon": "fa-book"
     }
   ]
 }
