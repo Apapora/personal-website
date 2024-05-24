@@ -7,7 +7,7 @@ function Timeline() {
   return (
     <div className="timeline is-centered">
       <header className="timeline-header">
-        <span className="tag is-medium is-dark">
+        <span className="tag is-medium">
           {new Date().getFullYear()}
         </span>
       </header>

@@ -13,12 +13,6 @@
     },
     "profiles": [
       {
-        "network": "Instagram",
-        "username": "chadenstein",
-        "url": "https://www.instagram.com/chadenstein/",
-        "x_icon": "fab fa-2x fa-instagram"
-      }, 
-      {
         "network": "LinkedIn",
         "username": "Chad Johnston",
         "url": "https://www.linkedin.com/in/chad-johnston-8427b040/",
@@ -41,6 +35,12 @@
         "username": "",
         "url": "https://www.goodreads.com /user/show/130857021-chad-jo",
         "x_icon": "fab fa-2x fa-goodreads"
+      },
+      {
+        "network": "Instagram",
+        "username": "chadenstein",
+        "url": "https://www.instagram.com/chadenstein/",
+        "x_icon": "fab fa-2x fa-instagram"
       }
     ]
   },
