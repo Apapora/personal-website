@@ -1,5 +1,5 @@
 import React from "react";
-
+import VisitorCounter from "../elements/VisitorCounter";
 function Footer() {
   
   return (
@@ -8,6 +8,9 @@ function Footer() {
         <p>
           Thanks for stopping by. <i class="fa-solid fa-heart"></i>
         </p>
+      </div>
+      <div className="has-text-white has-text-centered">
+      <VisitorCounter />
       </div>
     </footer>
   );

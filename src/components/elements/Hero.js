@@ -5,14 +5,14 @@ import App from "./Particle";
 
 function Hero() {
   return (
-    <section className="hero is-dark is-fullheight has-bg-image">
+    <section className="hero is-fullheight is-dark has-bg-image">
       <div className="hero-head">
         <NavBar />
       </div>
       <div><App /></div>
       <div className="hero-body">
         <div className="container">
-          <p className="subtitle is-5 has-text-weight-light">Hello, I'm an</p>
+          <p className="subtitle is-5">Hello, I'm an</p>
           <h1 className="title">{Resume.basics.label}</h1>
           <h2 className="subtitle">
             {Resume.basics.location.region}, {Resume.basics.location.country}
@@ -31,7 +31,7 @@ function Hero() {
                   className="is-hovered"
                   title={value.network}
                 >
-                  <span className="icon is-medium is-">
+                  <span className="icon is-medium has-text-primary">
                     <i className={value.x_icon}></i>
                   </span>
                 </a>

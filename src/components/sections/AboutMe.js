@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Badge from "../elements/Badge";
+//import Badge from "../elements/Badge";
 import Resume from "../../resume.json";
 //import App from "../elements/TSParticles";
 import axios from "axios";
@@ -49,7 +49,7 @@ function AboutMe() {
 
 
   return (
-    <section className="section has-background-info" id="aboutMe">
+    <section className="section has-background-info-35" id="aboutMe">
       <div className="container has-text-centered">
         <figure className="image container is-180x180">
           <img
@@ -106,6 +106,7 @@ function AboutMe() {
             </form>
           )
         )}
+        {/*
         <div className="container interests">
           <div className="field is-grouped is-grouped-multiline has-text-centered">
             {Resume.interests.map((value, index) => {
@@ -115,6 +116,7 @@ function AboutMe() {
             })}
           </div>
         </div>
+          */}
       </div>
     </section>
   );
