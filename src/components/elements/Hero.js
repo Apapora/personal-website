@@ -15,8 +15,10 @@ function Hero() {
           <p className="subtitle is-5">Hello, I'm an</p>
           <h1 className="title">{Resume.basics.label}</h1>
           <h2 className="subtitle">
-            {Resume.basics.location.region}, {Resume.basics.location.country}
-          </h2>
+            <p className="subtitle is-5">in 
+	    {Resume.basics.location.region}, {Resume.basics.location.country}
+            </p> 
+	  </h2>
         </div>
       </div>
       <div className="hero-foot" style={{ paddingBottom: "20px" }}>

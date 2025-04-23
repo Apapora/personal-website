@@ -1,69 +1,83 @@
-import React from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import { useCallback } from "react";
+import { useEffect } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const App = () => {
-    const options = {
-        particles: {
-          color: {
-            value: "#ffffff",
-          },
-          number: {
-            value: 160,
-            density: {
-              enable: true,
-              area: 1500,
-            },
-          },
-          links: {
-            enable: false,
-            opacity: 0.03,
-          },
-          move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: { min: 1, max: 3 },
-          },
-          opacity: {
-            animation: {
-              enable: true,
-              speed: 1,
-              minimumValue: 0.05,
-            },
-          },
-        },
-        fullScreen: {
-          zIndex: 10,
-          enable: false // this is the line to change
-        },
-        interactivity: {
-          events: {
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-          modes: {
-            push: {
-              particles_nb: 1,
-            },
-          },
-        },
-        detectRetina: true,
-    }
+  // Initialize the particles engine
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine); // Use loadSlim for a lighter bundle
+    });
+  }, []);
 
-    const particlesInit = useCallback(async (engine) => {
-        await loadFull(engine);
-    }, []);
+  // Particle configuration (updated for v3)
+  const options = {
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      number: {
+        value: 160,
+        density: {
+          enable: true,
+          area: 1500, // Changed from value_area to area
+        },
+      },
+      links: {
+        enable: false,
+        opacity: 0.03,
+      },
+      move: {
+        direction: "right",
+        enable: true, // Explicitly enable movement
+        speed: 0.05,
+      },
+      size: {
+        value: { min: 1, max: 3 },
+      },
+      opacity: {
+        value: { min: 0.05, max: 1 }, // Updated for v3
+        animation: {
+          enable: true,
+          speed: 1,
+          minimumValue: 0.05,
+        },
+      },
+    },
+    fullScreen: {
+      zIndex: 10,
+      enable: false, // Keeps particles within container
+    },
+    interactivity: {
+      events: {
+        onClick: { // Changed from onclick to onClick
+          enable: true,
+          mode: "push",
+        },
+      },
+      modes: {
+        push: {
+          quantity: 1, // Changed from particles_nb to quantity
+        },
+      },
+    },
+    detectRetina: true,
+  };
 
-    return (
-        <div className="App">
-            <Particles is="tsparticles" options={options} init={particlesInit} />
-        </div>
-    );
+  // Optional callback for when particles are loaded
+  const particlesLoaded = (container) => {
+    console.log("Particles loaded", container);
+  };
+
+  return (
+    <div className="App">
+      <Particles
+        id="tsparticles" // Fixed from is="tsparticles"
+        options={options}
+        particlesLoaded={particlesLoaded}
+      />
+    </div>
+  );
 };
 
-export default App
+export default App;
