@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import Resume from "../../resume.json";
-import axios from "axios";
 
 const AboutMe = () => {
   return (
