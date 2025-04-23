@@ -17,8 +17,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@4
         with:
-          node-verstion: '22'
-          cache: 'npm'
+          node-version: '22'
 
       - name: Install npm
         run: npm install -g npm@11.3.0    
