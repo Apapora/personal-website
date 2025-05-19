@@ -4,10 +4,24 @@ from decimal import Decimal
 
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('VisitorCount')
+CORS_HEADERS = {
+    'Access-Control-Allow-Origin': 'https://www.chad-johnston.com',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+}
 
 def lambda_handler(event, context):
     try:
         http_method = event["requestContext"]["http"]["method"]
+        
+        if http_method == 'OPTIONS':
+            return {
+                'statusCode': 204,
+                'headers': CORS_HEADERS,
+                'body': ''
+            }
+
+        
         if http_method == 'POST':
             body = json.loads(event.get('body', '{}'))
             page = body.get('page')
@@ -15,11 +29,7 @@ def lambda_handler(event, context):
             if not page:
                 return {
                     'statusCode': 400,
-                    'headers': {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Headers': 'Content-Type',
-                        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-                    },
+                    'headers': CORS_HEADERS,
                     'body': json.dumps({'error': 'Missing "page" in request body'})
                 }
 
@@ -37,21 +47,13 @@ def lambda_handler(event, context):
 
             return {
                 'statusCode': 200,
-                'headers': {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Content-Type',
-                    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-                },
+                'headers': CORS_HEADERS,
                 'body': json.dumps({'message': 'Visitor count incremented', 'new_count': new_count})
             }
         else:
             return {
                 'statusCode': 405,
-                'headers': {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Content-Type',
-                    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-                },
+                'headers': CORS_HEADERS,
                 'body': json.dumps({'error': 'Method not allowed'})
             }
 
@@ -59,10 +61,6 @@ def lambda_handler(event, context):
         print(f"Error: {e}")
         return {
             'statusCode': 500,
-            'headers': {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-            },
+            'headers': CORS_HEADERS,
             'body': json.dumps({'error': 'Internal server error', 'message': str(e)})
         }

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const VisitorCounter = () => {
   const [count, setCount] = useState(null);
-  const apiUrl = 'https://s8biyvi4kh.execute-api.us-east-1.amazonaws.com';
+  const apiUrl = 'https://42l28wp4eh.execute-api.us-east-1.amazonaws.com';
 
   // Function to increment and retrieve visitor count
   const incrementAndGetVisitorCount = async () => {
