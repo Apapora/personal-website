@@ -1,21 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-  default_tags {
-    tags = {
-      Tofu = "True"
-    }
-  }
-}
-
-terraform {
-  backend "s3" {
-    encrypt        = true
-    bucket         = "apopora-tf-state-bucket"
-    dynamodb_table = "tf-state-table"
-    role_arn       = "$tf-state-management-role"
-    key            = "personal-website"
-  }
-}
 
 # DynamoDB Table
 resource "aws_dynamodb_table" "visitor_count" {
@@ -31,8 +13,8 @@ resource "aws_dynamodb_table" "visitor_count" {
 }
 
 # IAM Role for Lambda
-resource "aws_iam_role" "lambda_exec_role" {
-  name = "VisitorCount-role-morygxho"
+resource "aws_iam_role" "visitor_count_role" {
+  name = var.VisitorCount_role_name
   path = "/service-role/"
 
   assume_role_policy = jsonencode({
@@ -50,8 +32,9 @@ resource "aws_iam_role" "lambda_exec_role" {
 }
 
 # IAM Policy for Lambda
-resource "aws_iam_policy" "lambda_policy" {
-  name = "VisitorCountPolicy"
+resource "aws_iam_role_policy" "lambda_policy" {
+  name = var.VisitorCount_policy_name
+  role = aws_iam_role.visitor_count_role.id
 
   policy = jsonencode({
     Version = "2012-10-17"
@@ -63,25 +46,28 @@ resource "aws_iam_policy" "lambda_policy" {
           "dynamodb:GetItem",
           "dynamodb:UpdateItem"
         ]
-        Resource = "${aws_dynamodb_table.visitor_count.arn}"
+        Resource = aws_dynamodb_table.visitor_count.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ]
+        Resource = "arn:aws:logs:${var.aws_region}:${var.account_id}:*"
       }
     ]
   })
 }
 
-# Attach IAM Policy to Role
-resource "aws_iam_role_policy_attachment" "lambda_policy_attach" {
-  role       = aws_iam_role.lambda_exec_role.name
-  policy_arn = aws_iam_policy.lambda_policy.arn
-}
-
 # Lambda Function
 resource "aws_lambda_function" "visitor_count" {
-  function_name = "VisitorCount"
+  function_name = var.lambda_function_name
   architectures = [
     "arm64",
   ]
-  role    = aws_iam_role.lambda_exec_role.arn
+  role    = aws_iam_role.visitor_count_role.arn
   handler = "VisitorCount.lambda_handler"
   layers  = []
   runtime = "python3.12"
@@ -98,9 +84,9 @@ resource "aws_lambda_function" "visitor_count" {
     mode = "PassThrough"
   }
 
-  # Assuming your Lambda function code is stored in a zip file in S3
-  s3_bucket = "www.chad-johnston.com"
-  s3_key    = "scripts/lambda.zip"
+  # Assuming Lambda function code is stored in a zip file in S3
+  s3_bucket = var.s3_site_bucket
+  s3_key    = var.s3_script_key
 
   environment {
     variables = {
@@ -123,7 +109,7 @@ resource "aws_apigatewayv2_api" "http_api" {
       "POST"
     ]
     allow_origins = [
-      "https://www.chad-johnston.com"
+      var.cors_allowed_origin
     ]
     expose_headers = []
     max_age        = 3600
