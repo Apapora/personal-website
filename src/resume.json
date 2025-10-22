@@ -176,7 +176,7 @@
     },
     {
       "language": "Mandarin Chinese",
-      "fluency": "Basic speaker"
+      "fluency": "B1 - Intermediate"
     }
   ],
   "certificates": [
@@ -189,15 +189,7 @@
       "x_imageName": "image.png"
     },
     {
-      "name": "HashiCorp: Terraform Associate",
-      "issuer": "HashiCorp",
-      "url": "",
-      "x_badgeId": "",
-      "x_imageId": "99289602-861e-4929-8277-773e63a2fa6f",
-      "x_imageName": "image.png"
-    },
-    {
-      "name": "ITIL Foundation",
+      "name": "Azure Devops Expert",
       "issuer": "Vinsys",
       "url": "",
       "x_badgeId": "",
