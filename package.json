@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@tsparticles/engine": "^3.0.0",
+    "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.0",
     "axios": "^1.7.4",
